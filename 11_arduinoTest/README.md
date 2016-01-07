@@ -21,7 +21,7 @@ Possition the PhotoDarlington on the right side on top of the background tree wh
 Circuit (components look different):
 
 
-![](timb.png)
+![](11_arduinoTest/timb.png)
 
 
 created July 23th 1014
