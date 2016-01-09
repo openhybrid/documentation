@@ -6,6 +6,6 @@ A: The I/O points are added to the HybridObject using the .add([Hybrid Object], 
 
    Now if you have named your interface as “ slider” as shown in the videos here 
    http://openhybrid.org/adding-web-content.html , then to add an I/O point to the
-   HybridObject called “slider” , you use .add( “slider” ,”your_I/O_point_name”)
-   This will add your I/O point to the specified object
+   HybridObject called “slider” , 
+   you use .add( “slider” ,”your_I/O_point_name”) , This will add your I/O point to the specified object
 
