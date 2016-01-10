@@ -6,8 +6,8 @@ and has to be placed in the Arduino IDE library folder. For example if you have 
 you use **.add( "slider", "your_I/O_point_name")**. This will add your I/O point to the specified object.
 
 
-Q: I cannot access the Hybridobject interface on arduino_name.local:8080 after resetting yun with hybridobject image
+# I cannot access the Hybridobject interface on arduino_name.local:8080 after resetting yun with hybridobject image
 
-A: This might be due to the name not being resolved to ip automaticaly, in that case find the
+ This might be due to the name not being resolved to ip automaticaly, in that case find the
      ip of the arduino yun from yours routers connfiguration page ( say it is 192.168.0.5)
      you can access the hybridobject interface by from 192.168.0.5:8080
