@@ -1,4 +1,4 @@
-### Why can't i see my I/O points after addding them in arduino code , but i can see the slider ?
+### Why can't i see my I/O points after addding them in arduino code, but i can see the slider?
 
 The I/O points are added to the HybridObject using the **.add([Hybrid Object], [IO Point])**
 function which is defined in the HybridObject library  which can be downloaded [here](http://openhybrid.org/download.html)
