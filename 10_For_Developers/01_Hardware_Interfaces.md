@@ -71,7 +71,25 @@ Returns **true** if debug mode is active, **false** otherwise.
 
 # Creating a new hardware interface
 
-Description of how to implement a new hardware interface
+1. Create a new folder for your hardware interface in the **hardwareInterfaces** folder of your OpenHybrid installation. In the following we assume
+you created a folder **MyHWInterface**
+2. Create the file **index.js** in the folder **MyHWInterface**
+3. Inside **index.js** implement the following functions (take a look at the [empty example](https://github.com/openhybrid/object/blob/beta_hardwareInterfaces/hardwareInterfaces/emptyExample/index.js)):
+  * **exports.enabled**  
+    Set to **true** to enable your hardware interface. If set to **false** it will be ignored by the OpenHybrid server which means the server never calls
+    the exported functions. You should enclose all your code in an if-statement which checks if the hardware interface is enabled or not:
+    ```
+    exports.enabled = false;
+    if (exports.enabled) {
+        //Your code
+        var server = require(__dirname + '/../../libraries/HybridObjectsHardwareInterfaces');
+    }
+   ```
+
+  * **exports.init**
+  * **exports.receive**
+  * **exports.send**
+  * **exports.shutdown**
 
 # Example implementation
 
