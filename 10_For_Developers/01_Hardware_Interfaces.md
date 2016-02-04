@@ -50,7 +50,7 @@ Description of how to implement a new hardware interface
 
 # Example implementation
 
-```javascript
+'''javascript
 //Enable this hardware interface
 exports.enabled = false;
 
@@ -169,4 +169,4 @@ if (exports.enabled) {
         server.clearIO("mpdClient");
     };
 }
-```
+'''
