@@ -49,3 +49,8 @@ With this function you can pass data from your hardware interface to the HybridO
 Description of how to implement a new hardware interface
 
 # Example implementation
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
