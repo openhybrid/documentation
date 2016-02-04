@@ -79,24 +79,24 @@ you created a folder **MyHWInterface**
     Set to **true** to enable your hardware interface. If set to **false** it will be ignored by the OpenHybrid server which means the server never calls
     the exported functions. You should enclose all your code in an if-statement which checks if the hardware interface is enabled or not:
     
-```
-exports.enabled = false;
-if (exports.enabled) {
-    var server = require(__dirname + '/../../libraries/HybridObjectsHardwareInterfaces');
-    //Your code
-}
-```
+    ```
+    exports.enabled = false;
+    if (exports.enabled) {
+        var server = require(__dirname + '/../../libraries/HybridObjectsHardwareInterfaces');
+        //Your code
+    }
+    ```
 
   * **exports.init()**  
     This function is called repeatedly by the server. Place your calls to **addIO()** and **clearIO()** inside this function.
 
-```
-exports.init = function(){
-   server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
-   server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
-   server.clearIO("MyHWInterface");
-}
-```
+    ```
+    exports.init = function(){
+       server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
+       server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
+       server.clearIO("MyHWInterface");
+    }
+    ```
 
   * **exports.receive**
   * **exports.send**
