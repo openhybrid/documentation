@@ -44,6 +44,31 @@ With this function you can pass data from your hardware interface to the HybridO
   * **"p"**: indicate that **value** is a floating point value meant to be added to the receiving IOPoint
   * **"n"**: indicate that **value** is a floating point value meant to be substracted from the receiving IOPoint
 
+## addIO(objName, ioName, plugin, type)
+
+With this function you can add an IOPoint to your HybridObject.
+
+* **objName** is a string value containing the name of the HybridObject
+* **ioName** is a string value containing the name of the IOPoint
+* **plugin** is a string value containing the  datapoint interface to use. If you don't have your own datapoint interface use "default"
+* **type** is a string value containing the name of your hardware interface. It must be the same as the name of the folder containing your hardware
+interface code
+
+## clearIO(type)
+
+This function clears all HybridObjects of the specified type. It removes IOPoints which are not longer needed.
+
+* **type** is a string value containing the name of your hardware interface. It must be the same as the name of the folder containing your hardware
+interface code
+
+## developerOn()
+
+This function enables the developer functions which allow you to move IOPoints and the WebUI with the RealityEditor.
+
+## getDebug()
+
+Returns **true** if debug mode is active, **false** otherwise.
+
 # Creating a new hardware interface
 
 Description of how to implement a new hardware interface
