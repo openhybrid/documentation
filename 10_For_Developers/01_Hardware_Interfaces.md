@@ -9,7 +9,7 @@ to implement your own hardware interface.
 ## What is a HybridObject?
 A HybridObject is a physical object which is augmented by a virtual object. It consists of so called **IOPoints** which can send and receive data.
 IOPoints can be interconnected so that one IOPoint's output can be used as input for a connected IOPoint. Additionally a HybridObject has an
-user interface. To learn more about this read: TODO: Add links
+user interface. To learn more about this read: http://documentation.openhybrid.org/Design_Guidelines (NOTE: nothing in this chapter yet)
 
 ## What is a hardware interface?
 
@@ -21,7 +21,8 @@ it on or off.
 
 ## Follow the design guidelines!
 
-When you implement your hardware interface you should follow the design guidelines which are explained in detail here (TODO: Add link).
+When you implement your hardware interface you should follow the design guidelines which are explained in detail 
+[here](http://documentation.openhybrid.org/Design_Guidelines) (NOTE: nothing there yet)
 The most important thing is that your IOPoints only handle values in the range '[0,1]'. This restriction ensures that all IOPoints can
 communicate with each other.
 
@@ -49,4 +50,123 @@ Description of how to implement a new hardware interface
 
 # Example implementation
 
-An example, probably simply the mpd interface
+```javascript
+//Enable this hardware interface
+exports.enabled = false;
+
+if (exports.enabled) {
+    var fs = require('fs');
+    var mpd = require('mpd');
+    var _ = require('lodash');
+    var server = require(__dirname + '/../../libraries/HybridObjectsHardwareInterfaces');
+
+    var mpdServers = JSON.parse(fs.readFileSync(__dirname + "/config.json", "utf8"));
+    var cmd = mpd.cmd;
+
+
+    /**
+     * @desc setup() runs once, adds and clears the IO points
+     **/
+    function setup() {
+        server.developerOn();
+
+        for (var key in mpdServers) {
+            var mpdServer = mpdServers[key];
+            mpdServer.ready = false;
+
+            mpdServer.client = mpd.connect({ port: mpdServer.port, host: mpdServer.host });
+
+            mpdServer.client.on('error', function (err) {
+                console.log("MPD " + mpdServer.id + " " + err);
+            });
+
+
+            //Create listeners for mpd events
+            mpdServer.client.on('ready', function () {
+                mpdServer.ready = true;
+            });
+
+            //volume has changed
+            mpdServer.client.on('system-mixer', function () {
+                mpdServer.client.sendCommand(cmd("status", []), function (err, msg) {
+                    if (err) console.log("Error: " + err);
+                    else {
+                        var status = mpd.parseKeyValueMessage(msg);
+                        server.writeIOToServer(key, "volume", status.volume / 100, "f");
+                    }
+
+                });
+
+            });
+
+
+            //playing status has changed
+            mpdServer.client.on('system-player', function () {
+                mpdServer.client.sendCommand(cmd("status", []), function (err, msg) {
+                    if (err) console.log("Error executing mpd command: " + err);
+                    else {
+                        var status = mpd.parseKeyValueMessage(msg);
+                        if (status.state == "stop") {
+                            server.writeIOToServer(key, "status", 0, "f");
+                        } else if (status.state == "play") {
+                            server.writeIOToServer(key, "status", 1, "f");
+                        } else if (status.state == "pause") {
+                            server.writeIOToServer(key, "status", 0.5, "f");
+                        }
+                    }
+
+                });
+
+            });
+
+        }
+    }
+
+
+    exports.receive = function () {
+        setup();
+    };
+
+    exports.send = function (objName, ioName, value, mode, type) {
+        if (server.getDebug()) console.log("Incoming: " + objName + "   " + ioName + "   " + value);
+        if (mpdServers.hasOwnProperty(objName)) {
+            if (ioName == "volume") {
+                mpdServers[objName].client.sendCommand("setvol " + _.floor(value * 100), function (err, msg) {
+                    if (err) console.log("Error executing mpd command: " + err);
+                });
+            } else if (ioName == "status") {
+                if (value < 0.33) {
+                    if (mpdServers[objName].ready) {
+                        mpdServers[objName].client.sendCommand(cmd("stop", []), function (err, msg) {
+                            if (err) console.log("Error executing mpd command: " + err);
+                        });
+                    }
+                } else if (value < 0.66) {
+                    if (mpdServers[objName].ready) {
+                        mpdServers[objName].client.sendCommand(cmd("pause", []), function (err, msg) {
+                            if (err) console.log("Error executing mpd command: " + err);
+                        });
+                    }
+                } else {
+                    if (mpdServers[objName].ready) {
+                        mpdServers[objName].client.sendCommand(cmd("play", []), function (err, msg) {
+                            if (err) console.log("Error executing mpd command: " + err);
+                        });
+                    }
+                }
+            }
+
+        }
+
+    };
+
+    exports.init = function () {
+        if (server.getDebug()) console.log("mpd init()");
+        for (var key in mpdServers) {
+            server.addIO(key, "volume", "default", "mpdClient");
+            server.addIO(key, "status", "default", "mpdClient");
+        }
+        server.clearIO("mpdClient");
+    };
+}
+```
