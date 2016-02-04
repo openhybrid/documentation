@@ -82,12 +82,22 @@ you created a folder **MyHWInterface**
 ```
 exports.enabled = false;
 if (exports.enabled) {
-    //Your code
     var server = require(__dirname + '/../../libraries/HybridObjectsHardwareInterfaces');
+    //Your code
 }
 ```
 
-  * **exports.init**
+  * **exports.init()**  
+    This function is called repeatedly by the server. Place your calls to **addIO()** and **clearIO()** inside this function.
+
+```
+exports.init = function(){
+   server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
+   server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
+   server.clearIO("MyHWInterface");
+}
+```
+
   * **exports.receive**
   * **exports.send**
   * **exports.shutdown**
