@@ -1,1 +1,2 @@
-This is just another sample page to get you started. What do you think ?
+With Open Hybrid, you are able to directly map a digital interface onto a physical object. These are the augmented interfaces you see (such as the Slider,buttons,Graphs etc)
+By doing so, you never need to memorize any drop down menu or App. With the Reality Editor you can just approach an object and interact with its directly mapped user interface. You can build hundreds of objects or even interact with spaces that you have never been to before. At no point do you need to retain a memory of how things are connected.
