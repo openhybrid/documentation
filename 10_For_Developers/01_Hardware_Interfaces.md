@@ -184,7 +184,8 @@ The index.js:
 
 
         /**
-         * @desc setup() runs once, adds and clears the IO points
+         * @desc setup() runs once, establishes the connection with the mpd server
+         *               and adds event handlers
          **/
         function setup() {
             //enable developer mode for the RealityEditor
