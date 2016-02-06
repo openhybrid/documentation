@@ -9,4 +9,10 @@ This platform allows you to:
 Every object that you build with this platform, will be compatible and can be connected with any other object ever built with the Hybrid Objects platform.The entire platform uses Web standards. This means there are no proprietary protocols.
 Hybrid Objects uses the same technologies all your favorite webpages use to communicate.<br>All data about interfaces and connections are stored within the objects themselves.<br>
 
-Wherever you can run node.js you can run the Hybrid Object platform. We have successfully experimented with MIPS, ARM, x86 and x64 systems on Windows, Linux and OSX. We have built the Reality Editor with JavaScript and Open Frameworks.
+Wherever you can run node.js you can run the Hybrid Object platform. We have successfully experimented with MIPS, ARM, x86 and x64 systems on Windows, Linux and OSX. We have built the Reality Editor with JavaScript and Open Frameworks.<br>
+
+The minimum system requirements to run the hybrid object are:
++400MhZ
++32 MB Ram
++ 100 MB Memory
+TCP/IP and UDP Networking capabilities.
