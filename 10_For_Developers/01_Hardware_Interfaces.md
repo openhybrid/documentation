@@ -148,7 +148,7 @@ you created a folder **MyHWInterface**
 
 The following is a working example. It implements a [Music Player Daemon](http://www.musicpd.org/) hardware interface
 and it uses [the mpd package from npmjs.com](https://www.npmjs.com/package/mpd) to communicate with the mpd server.
-It implements two IOPoints - status and volume - for each configured mpd server. It requires a configuration file config.json which
+It implements two IOPoints - status and volume - for each configured mpd server. It requires a configuration file **config.json** which
 configures the data needed to connect to a mpd server. For host you can either pass the hostname or ip address of the mpd server:
 
     {
@@ -164,7 +164,7 @@ configures the data needed to connect to a mpd server. For host you can either p
       }
     }
 
-The index.js:
+The **index.js**:
 
     //Enable this hardware interface
     exports.enabled = false;
