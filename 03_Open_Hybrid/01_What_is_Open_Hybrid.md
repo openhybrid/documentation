@@ -12,7 +12,7 @@ Hybrid Objects uses the same technologies all your favorite webpages use to comm
 Wherever you can run node.js you can run the Hybrid Object platform. We have successfully experimented with MIPS, ARM, x86 and x64 systems on Windows, Linux and OSX. We have built the Reality Editor with JavaScript and Open Frameworks.<br>
 
 The minimum system requirements to run the hybrid object are:
-+400MhZ
-+32 MB Ram
-+ 100 MB Memory
-TCP/IP and UDP Networking capabilities.
+<li>+400MhZ</li>
+<li>+32 MB Ram</li>
+<li>+ 100 MB Memory</li>
+<li>TCP/IP and UDP Networking capabilities</li>
