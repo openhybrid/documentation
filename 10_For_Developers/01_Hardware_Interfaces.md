@@ -118,12 +118,12 @@ you created a folder **MyHWInterface**
     * **exports.send(objName, ioName, value, mode, type)**  
     This function is called by the HybridObject server whenever data for one of your HybridObject's IO points arrives. Parse the data inside
     the function and pass it to your hardware.
-    * **objName** is a string value containing the name of the HybridObject
-    * **ioName** is a string value containing the name of the IOPoint
-    * **value** is the incoming value
-    * **mode** is a string value describing the datatype of value
-    * **type** is a string value containing the name of your hardware interface. It must be the same as the name of the folder containing your hardware
-    interface code
+        * **objName** is a string value containing the name of the HybridObject
+        * **ioName** is a string value containing the name of the IOPoint
+        * **value** is the incoming value
+        * **mode** is a string value describing the datatype of value
+        * **type** is a string value containing the name of your hardware interface. It must be the same as the name of the folder containing your hardware
+        interface code
 
         ```
         exports.send = function(objName, ioName, value, mode, type){
