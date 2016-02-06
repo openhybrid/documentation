@@ -88,34 +88,34 @@ you created a folder **MyHWInterface**
         }
         ```
 
-  * **exports.init()**  
+    * **exports.init()**  
     This function is called repeatedly by the server. Place your calls to **addIO()** and **clearIO()** inside this function.
 
-    ```
-    exports.init = function(){
-       server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
-       server.addIO("MyHybridObject","MyIOPoint2","default", "MyHWInterface");
-       server.clearIO("MyHWInterface");
-    }
-    ```
+        ```
+        exports.init = function(){
+           server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
+           server.addIO("MyHybridObject","MyIOPoint2","default", "MyHWInterface");
+           server.clearIO("MyHWInterface");
+        }
+        ```
 
-  * **exports.receive()**  
+    * **exports.receive()**  
     This is called once by the server. Start the event loop of your hardware interface here or register to events from your hardware.
     Call **writeIOToServer()** whenever you receive new values from your hardware and you want to send the data to the server.
 
-    ```
-    exports.receive = function(){
-        //Poll for values
-       setInterval(function() {
-            //Assuming that readHWValue is some function that get's a value
-            //from the hardware. You will have to create your own function that
-            //does this.
-            var value = readHWValue(); 
-       }, 1000);
-    }
-    ```
+        ```
+        exports.receive = function(){
+            //Poll for values
+           setInterval(function() {
+                //Assuming that readHWValue is some function that get's a value
+                //from the hardware. You will have to create your own function that
+                //does this.
+                var value = readHWValue(); 
+           }, 1000);
+        }
+        ```
 
-  * **exports.send(objName, ioName, value, mode, type)**  
+    * **exports.send(objName, ioName, value, mode, type)**  
     This function is called by the HybridObject server whenever data for one of your HybridObject's IO points arrives. Parse the data inside
     the function and pass it to your hardware.
     * **objName** is a string value containing the name of the HybridObject
@@ -125,24 +125,24 @@ you created a folder **MyHWInterface**
     * **type** is a string value containing the name of your hardware interface. It must be the same as the name of the folder containing your hardware
     interface code
 
-    ```
-    exports.send = function(objName, ioName, value, mode, type){
-        if (objName == "MyHybridObject" && ioName == "MyIOPoint") {
-            //Assuming that writeValueToHW is a function that writes a value to the
-            //actual hardware. You will have to create your own function that
-            //does this.
-            writeValueToHW(value);
+        ```
+        exports.send = function(objName, ioName, value, mode, type){
+            if (objName == "MyHybridObject" && ioName == "MyIOPoint") {
+                //Assuming that writeValueToHW is a function that writes a value to the
+                //actual hardware. You will have to create your own function that
+                //does this.
+                writeValueToHW(value);
+            }
         }
-    }
-    ```
-  * **exports.shutdown()**  
+        ```
+    * **exports.shutdown()**  
     This function is called once by the server when the process is being torn down. Clean up open file handles or resources and return quickly.
 
-    ```
-    exports.shutdown = function() {
-        //cleanup here
-    }
-    ```
+        ```
+        exports.shutdown = function() {
+            //cleanup here
+        }
+        ```
 
 # Example implementation
 
