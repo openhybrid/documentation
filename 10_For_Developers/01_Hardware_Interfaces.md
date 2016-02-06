@@ -8,7 +8,7 @@ to implement your own hardware interface.
 
 ## What is a HybridObject?
 A HybridObject is a physical object which is augmented by a virtual object. It consists of so called **IOPoints** which can send and receive data.
-IOPoints can be interconnected so that one IOPoint's output can be used as input for a connected IOPoint. Additionally a HybridObject has an
+IOPoints can be interconnected so that one IOPoint's output can be used as input for a connected IOPoint. Additionally a HybridObject has a web based
 user interface. To learn more about this read:[Design_Guidelines]( http://documentation.openhybrid.org/Design_Guidelines) (NOTE: Added basic introduction)
 
 ## What is a hardware interface?
