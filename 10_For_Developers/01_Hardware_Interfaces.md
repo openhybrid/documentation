@@ -94,12 +94,26 @@ you created a folder **MyHWInterface**
     ```
     exports.init = function(){
        server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
-       server.addIO("MyHybridObject","MyIOPoint","default", "MyHWInterface");
+       server.addIO("MyHybridObject","MyIOPoint2","default", "MyHWInterface");
        server.clearIO("MyHWInterface");
     }
     ```
 
-  * **exports.receive**
+  * **exports.receive**  
+    This is called once by the server. Start the event loop of your hardware interface here or register to events from your hardware.
+    Call **writeIOToServer()** whenever you receive new values from your hardware and you want to send the data to the server.
+
+    ```
+    exports.receive = function(){
+        //Poll for values
+       setInterval(function() {
+             //readHWValue is some function that get's a value
+             //from the hardware
+            var value = readHWValue(); 
+       }, 1000);
+    }
+    ```
+
   * **exports.send**
   * **exports.shutdown**
 
