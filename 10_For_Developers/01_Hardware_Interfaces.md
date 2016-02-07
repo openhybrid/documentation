@@ -90,7 +90,8 @@ you created a folder **MyHWInterface**
         ```
 
     * **exports.init()**  
-    This function is called repeatedly by the server. Place your calls to **addIO()** and **clearIO()** inside this function.
+    This function is called by the server whenever it becomes necessary to reinitialize the HybridObject.
+    Place your calls to **addIO()** and **clearIO()** inside this function.
 
         ```
         exports.init = function(){
