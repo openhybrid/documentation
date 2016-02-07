@@ -24,7 +24,7 @@ it on or off accordingly.
 
 When you implement your hardware interface you should follow the design guidelines which are explained in detail 
 [here](!Design_Guidelines) (NOTE: Not very detailed yet)
-The most important thing is that your IOPoints only handle values in the range '[0,1]'. This restriction ensures that all IOPoints can
+The most important thing is that your IOPoints only handle values in the range [0,1]. This restriction ensures that all IOPoints can
 communicate with each other.
 
 
