@@ -1,5 +1,16 @@
 # The need for new visual Paradigms for the Operation of the Internet of Things.
   
+    
+<img src="http://openhybrid.org/images/pasted%20image%20661x647.png">
+
+With the Xerox Star (1981), we are looking at the first commercially available computer showing a Graphical User Interface. The paradigms introduced with this computer are still present in our day by day interaction with data.  A pointing device, a keyboard and a Graphical User Interface.
+
+
+
+<img src="http://openhybrid.org/images/pasted%20image%20969x543.jpg">
+
+These Paradigms are also used when we interact with our connected devices. When we want to show the latest smart lighting system to our friends, we take our phone out of our poket, search for the App, then we search in a drop-down menu for the name that we assigned with the light and eventually we are able to operate some controls.
+
 <table border="0">
 <tr>
 <td>
