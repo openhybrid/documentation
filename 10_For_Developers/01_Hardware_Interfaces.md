@@ -170,7 +170,7 @@ configures the data needed to connect to a mpd server. For host you can either p
 The **index.js**:
 
     //Enable this hardware interface
-    exports.enabled = false;
+    exports.enabled = true;
 
     //only execute the following code if the hardware interface is enabled
     if (exports.enabled) {
