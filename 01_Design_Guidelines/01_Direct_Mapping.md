@@ -1,4 +1,6 @@
-#The need for new visual Paradigms for the Operation of the Internet of Things.   
+# The need for new visual Paradigms for the Operation of the Internet of Things.
+
+## The need for new visual Paradigms for the Operation of the Internet of Things.     
 
     
 <table border="0">
