@@ -111,7 +111,8 @@ you created a folder **MyHWInterface**
                 //Assuming that readHWValue is some function that get's a value
                 //from the hardware. You will have to create your own function that
                 //does this.
-                var value = readHWValue(); 
+                var value = readHWValue();
+                server.writeIOToServer("MyHybridObject","MyIOPoint", value, "f");
            }, 1000);
         }
         ```
