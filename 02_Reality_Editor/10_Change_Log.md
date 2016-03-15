@@ -1,3 +1,6 @@
+## Version 1.6.0
+
+
 ## Version 1.5.7
 * Bugfix: Fixed scaling bug with extra resolution retina displays such as the iPhone 6+
 
