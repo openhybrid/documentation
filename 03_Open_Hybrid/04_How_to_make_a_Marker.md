@@ -7,4 +7,4 @@
 4.  make sure you save it as  **.png**   or   **.jpg** 
 5.  now you can use this image as target  
 
-Alternatively if you don't have photoshop you can use online sites like http://www.reduceimages.com to reduce the size
+Alternatively if you don't have photoshop you can use online sites like <a href="http://www.reduceimages.com">http://www.reduceimages.com</a> to reduce the size
