@@ -9,10 +9,10 @@
 **7.**<a href="https://vimeo.com/155443591"> Augmented Printer</a><br>
 **8.**<a href="https://vimeo.com/154935623"> Interaction with spatial Information by  Kyungmin Han</a><br>
 **9.**<a href="https://vimeo.com/155330983"> Interaction with spatial Information (concept) by  Kyungmin Han </a><br>
-**10.**<a href="https://youtu.be/PCEunCfCXPY">Controlling a Obstacle avoiding Robot by V Mohammed Ibrahim</a><br>
+**10.**<a href="https://youtu.be/PCEunCfCXPY"> Controlling a Obstacle avoiding Robot by V Mohammed Ibrahim</a><br>
 **11.**<a href="https://youtu.be/eGy7I6OP1ew"> Dynamic Line Graph Implementation by V Mohammed ibrahim</a><br>
 **12.**<a href="https://youtu.be/KupVqYzv6NU"> BCI with OpenHybrid-(Concept) by V Mohammed ibrahim</a><br>
 **13.**<a href="https://www.youtube.com/watch?v=fTaDAwAcBD4"> NYU Poly SMARTER RET Presentation on Open Hybrid by Phillip Cook</a><br>
-**14.**<a href="https://www.youtube.com/watch?v=mEyapWoHtDU">AR Interaction Between Two Hybrid Objects by Phillip Cook</a><br>
+**14.**<a href="https://www.youtube.com/watch?v=mEyapWoHtDU"> AR Interaction Between Two Hybrid Objects by Phillip Cook</a><br>
 
 <b> You can find more information on these videos <a href="http://forum.openhybrid.org/c/ShowTell">here</a>.</b>
