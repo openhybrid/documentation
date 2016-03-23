@@ -1,7 +1,7 @@
 <b> Here are some videos where you can watch the Reality Editor and OpenHybrid in action. </b> <br><br>
 
-**1.**<a href="https://vimeo.com/133196130"> Short Video of Reality Editor in action </a><br>
-**2.**<a href="http://openhybrid.org/solid.html"> SOLID Talk by Valentin Huen </a><br>
+**1.**<a href="http://openhybrid.org/solid.html"> SOLID Talk by Valentin Huen </a><br>
+**2.**<a href="https://vimeo.com/133196130"> Short Video of Reality Editor in action </a><br>
 **3.**<a href="http://openhybrid.org/reality-editor.html"> Reality Editor- Proof Of Concept by Valentin Heun </a><br>
 **4.**<a href="https://youtu.be/ctG1_2qun1s"> Smart Living Room by Carsten Strunk </a><br>
 **5.**<a href="https://vimeo.com/155854804"> Smart Pill Box by Vaclav Mlynář </a><br>
