@@ -7,7 +7,7 @@
 **5.**<a href="https://vimeo.com/155854804"> Smart Pill Box by Vaclav Mlynář </a><br>
 **6.**<a href="https://vimeo.com/156018995"> Bookmark Switch by Fiona O'Leary </a><br>
 **7.**<a href="https://vimeo.com/155443591"> Augmented Printer</a><br>
-**8.**<a href="https://vimeo.com/154935623"> Interaction with spatial Information 1 </a><br>
+**8.**<a href="https://vimeo.com/154935623"> Interaction with spatial Information </a><br>
 **9.**<a href="https://vimeo.com/155330983"> Interaction with spatial Information (concept) </a><br>
 **10.**<a href="https://youtu.be/PCEunCfCXPY">Controlling a Obstacle avoiding Robot</a><br>
 **11.**<a href="https://youtu.be/eGy7I6OP1ew"> Dynamic Line Graph Implementation</a><br>
