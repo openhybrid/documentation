@@ -13,4 +13,4 @@
 **11.**<a href="https://youtu.be/eGy7I6OP1ew"> Dynamic Line Graph Implementation</a><br>
 **12.**<a href="https://youtu.be/KupVqYzv6NU"> BCI with OpenHybrid-(Concept)</a><br>
 
-<b> You can find more information on these videos <a href="http://forum.openhybrid.org/c/ShowTell>"here</a>.</b>
+<b> You can find more information on these videos <a href="http://forum.openhybrid.org/c/ShowTell">here</a>.</b>
