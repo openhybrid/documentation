@@ -7,4 +7,5 @@ Current contents in different sections of the site :<br>
 <li>Reality Editor    - Information about the multitool for OpenHybrid </li>
 <li>OpenHybrid        - Information about the Openhybrid Platform </li>
 <li>FAQ               - For troubleshooting problems you may come across while using OpenHybrid</li>
+<li>Videos            - A Collection of Videos related to OpenHybrid and Reality Editor</li>
 <li>For Developers    - This section wil provide information about development with OpenHybrid</li>
