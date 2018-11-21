@@ -3,7 +3,7 @@
 
 You can export your Adobe Animate CC Scenes directly for the Reality Editor.
 		
-1. File > Publish Settings > Output File > Chose the directory of your Hybrid Object and add "index.js"
+1. File > Publish Settings > Output File > Chose the directory of your Hybrid Object and add "index.html"
 2. File > Publish for publishing your Hybrid Object UI
 
 For a transparent Background you should add the following action in the first frame:
